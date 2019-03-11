@@ -25,7 +25,7 @@ func PublicIP() (ip string, err error) {
 	return
 }
 
-// Get preferred outbound ip of this machine
+// LocalIP gets preferred outbound ip of this machine
 func LocalIP() string {
 	conn, err := net.Dial("udp", "8.8.8.8:80")
 	if err != nil {
